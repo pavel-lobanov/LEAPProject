@@ -1,0 +1,216 @@
+<script>
+if (!themeNum) {
+    buildThemeList();
+} else {
+    buildWordsTheme();
+}
+
+function buildThemeList() {
+    var wrapDiv = document.getElementById('content-wrapper');
+    var containerDiv = document.createElement('div');
+    containerDiv.className = 'container';
+    var rowDiv = document.createElement('div');
+    rowDiv.className = 'row';
+   containerDiv.innerHTML = '<h2 class="text-center">Выберете тему для изучения</h2>';
+    for (var i = 1; i < wordsThemes.length; i++) {
+        var colDiv = document.createElement('div');
+        colDiv.className = 'col-sm-4 col-md-4';
+        colDiv.innerHTML = '<p><a href="#learning_words' + i +
+        '"><button class="btn btn-default btn-block"><div class="theme-butt"><img src="img/words' + 
+        i + '.png" alt="" class="img-thumbnail"><span class="words-theme">' + 
+        wordsThemes[i]["theme"] +'</span></img></div></button></a></p>';
+        rowDiv.appendChild(colDiv);
+    }
+    containerDiv.appendChild(rowDiv);
+    wrapDiv.appendChild(containerDiv);
+}
+
+function buildWordsTheme () {
+    var wrapDiv = document.getElementById('content-wrapper');
+    var containerDiv = document.createElement('div');
+    containerDiv.className = "container";
+    var rowDiv = document.createElement('div');
+    rowDiv.className = "row";
+    var titleIMG = new Image;
+    titleIMG.src = 'img/logo/'+ themeNum + '.png';
+    titleIMG.className = 'img-responsve img-rounded title-img';
+    titleIMG.style.width = '50%';
+    var divsArr = [];
+    for (var i = 0; i < wordsBase[themeNum].length; i++) {
+        var colDiv = document.createElement('div');
+        colDiv.className = 'col-xs-6 col-sm-4 col-md-3';
+        colDiv.innerHTML = '<p> <div class="btn btn-default btn-block word-button"><span class="glyphicon glyphicon-play-circle"></span><img src="img/'+ themeNum +'/' + wordsBase[themeNum][i].en_word + 
+        '.jpg" alt="" class="img-thumbnail playImg" width="150"> <div class="row"> <div class="col-xs-12 col-md-12"><span class="text-center">' + 
+        wordsBase[themeNum][i].en_word + '</span></div> </div><div class="row"> <div class="col-xs-12 col-md-12"><span class="text-center">' + 
+        wordsBase[themeNum][i].transcription + '</span></div> </div> <div class="row"> <div class="col-xs-12 col-md-12"><span class="text-center">' + 
+        wordsBase[themeNum][i].ru_translate + '</span></div> </div> </img></div> </p>';
+        $.get('audio/'+ themeNum + '/' + wordsBase[themeNum][i].en_word + '.mp3',function(){},'xml');
+        colDiv.addEventListener('click', playSound, false);
+        divsArr.push(colDiv);
+    }
+    containerDiv.appendChild(rowDiv);
+    wrapDiv.appendChild(containerDiv);
+
+    var wordsCounter = 0;
+    var wordsPageCounter = 0;
+    var useInterval = false;
+    var wordsShows;
+
+    function showTitle () {
+      rowDiv.appendChild(titleIMG);
+      rowDiv.className = 'text-center'
+      var divTitle = document.createElement('div');
+      divTitle.className = 'alert alert-warning text-center';
+      divTitle.innerHTML = '<h4>Внимательно прослушайте и запомните слова. Можно повторно прослушать слово, если нажать на картинку.</h4>' 
+      rowDiv.appendChild(divTitle)
+      var buttonEl = document.createElement('button');
+      buttonEl.className = 'btn btn-default';
+      buttonEl.setAttribute('type', 'button');
+      buttonEl.innerHTML = 'Продолжить';
+      buttonEl.addEventListener('click', function(){
+         fadeOut (containerDiv,contentClear);
+         setTimeout(showWord,1800);
+         mobileSoundInit();
+      }, false);
+      rowDiv.appendChild(buttonEl);
+    }
+
+    function fadeOut (el,func) {
+      el.style.opacity = 1;
+      var fadeTimer = setInterval(function () {
+          el.style.opacity -= 0.1;
+          if(el.style.opacity < 0.1) {
+            el.style.opacity = 0;
+            clearInterval(fadeTimer); 
+            if (func) func();
+         }
+       },1000/60);
+    }
+    function fadeIn (el,func) {
+      el.style.opacity = 0;
+      var fadeTimer = setInterval(function () {
+          el.style.opacity = parseFloat(el.style.opacity)+0.1;
+          if(el.style.opacity > 1) {
+            clearInterval(fadeTimer); 
+            if (func) func();
+         }
+       },1000/30);
+    }
+    
+    function showWord () {
+        rowDiv.appendChild(divsArr[wordsCounter]);
+        $(divsArr[wordsCounter]).velocity("scroll", { duration: 800});
+        fadeIn(divsArr[wordsCounter]);
+        rowDiv.className = "row";
+        playSound(null, wordsBase[themeNum][wordsCounter].en_word);
+        wordsCounter++;
+        wordsPageCounter++;
+        if (wordsCounter == divsArr.length) {
+            useInterval = false;
+            clearInterval(wordsShows);
+            return showFinalButtons(); 
+        }
+        if (wordsPageCounter === 8) {
+            clearInterval(wordsShows);
+            useInterval = false;
+            nextWordsButtons();
+            wordsPageCounter = 0;
+        } else if (!useInterval) {
+            useInterval = true;
+            wordsShows = setInterval(showWord, 3500);
+        }
+        
+    }
+
+    function showFinalButtons () {
+      var rowDiv = document.createElement('div');
+      rowDiv.className = 'row text-center';        
+      var navEl = document.createElement('nav');
+      var ulEl = document.createElement('ul');
+      ulEl.className = 'pager';
+      var liEl = document.createElement('li');
+      liEl.innerHTML = '<a href="#learning">Вернуться к темам</a>';
+      ulEl.appendChild(liEl);
+      var liEl = document.createElement('li');
+      liEl.innerHTML = '<a href="#vbgame_words'+ themeNum +'">Перейти к упражнению</a>';
+      ulEl.appendChild(liEl);
+      navEl.appendChild(ulEl);
+      rowDiv.appendChild(navEl);
+      containerDiv.appendChild(rowDiv);
+    }
+
+    function nextWordsButtons () {
+         var rowDiv = document.createElement('div');
+         rowDiv.className = 'row text-center';        
+         for (var i = 0; i < 2; i++) {
+            var buttonEl = document.createElement('button');
+            buttonEl.className = 'btn btn-default btn-lg shiftButton';
+            buttonEl.setAttribute('type', 'button');
+            buttonEl.addEventListener('click', changeWords, false);
+            if(i === 0 && wordsCounter > 15) {
+                buttonEl.dataset.value = 'prev';
+                buttonEl.innerHTML = 'Назад';
+                rowDiv.appendChild(buttonEl);
+                $( '#content-wrapper' ).on( "swiperight", changeWords );
+
+            } 
+            if (i === 1) {
+                buttonEl.dataset.value = 'next';
+                buttonEl.innerHTML = 'Далее';
+                rowDiv.appendChild(buttonEl);
+                $( '#content-wrapper' ).on( "swipeleft", changeWords );
+                document.body.addEventListener('keyup',changeWords, false);
+            }
+            
+         }
+         containerDiv.appendChild(rowDiv);
+         $(buttonEl).velocity("scroll", { duration: 800});
+      }
+
+    function changeWords (evObj) {
+        var evObj = evObj || window.event;
+        var button = evObj.target;
+        var buttData = button.dataset.value;
+        if (buttData === 'prev' || evObj.type === 'swiperight' || (evObj.ctrlKey && evObj.keyCode === 37 && wordsCounter > 8)) {
+            wordsCounter -= 16;
+            contentClear();
+            showWord();
+            $( '#content-wrapper' ).unbind('swiperight') 
+        }
+        if (buttData === 'next'|| evObj.type === 'swipeleft' || (evObj.ctrlKey && evObj.keyCode === 39)) {
+            contentClear();
+            showWord(); 
+            $( '#content-wrapper' ).unbind('swipeleft');
+
+        }
+
+    }
+    function contentClear () {
+        document.body.removeEventListener('keyup',changeWords, false);
+        containerDiv.innerHTML = '';
+        containerDiv.style.opacity = 1;
+        rowDiv.innerHTML = '';
+        containerDiv.appendChild(rowDiv);
+        var buttForClear = document.querySelectorAll('.btn');
+        for (var i = 0; i < buttForClear.length; i++) {
+            buttForClear[i].removeEventListener('click', playSound, false);
+            buttForClear[i].removeEventListener('click', changeWords, false);
+        }
+    }
+    
+    function mobileSoundInit () {
+      audio.play();
+      audio.pause();
+    }
+
+    function playSound(evObj,word) {
+      var evObj = evObj || window.event;
+      if (evObj) audio.currentTime = 0;
+      var soundName = word || evObj.currentTarget.querySelector('.text-center').innerHTML;
+      audio.src='audio/'+ themeNum +'/'+ soundName +'.mp3';
+      audio.play();
+    }
+    window.addEventListener('hashchange',function() {useInterval = false; clearInterval(wordsShows);}, false);
+    showTitle();
+}
+</script>

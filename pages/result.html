@@ -1,0 +1,64 @@
+<div class="modal fade" id="result-modal" tabindex="-1" role="dialog" aria-labelledby="resulty">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">ТОП 20 пользователей:</h4>
+        </div>
+        <div class="modal-body"></div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="top20"></div>
+
+<script>
+  function buildRatingList () {
+    var mainDiv = document.querySelector('.top20');
+    var modalWind = document.querySelector('.modal-body');
+    var containerDiv = document.createElement('div');
+    containerDiv.className = 'container text-center results';
+    var usersKeysArr = LEAPStorage.GetKeys();
+    var usersArr = [];
+    var currUser;
+
+    usersKeysArr.forEach( function(element, index) {
+    usersArr[index] = LEAPStorage.GetValue(element);
+    });
+
+    usersArr.sort(function (a, b) {
+        if (a.score < b.score) return 1;
+        if (a.score > b.score) return -1;
+        return 0;  
+    });
+
+    for (var i = 0; i < usersArr.length; i++) {
+      var rowDiv = document.createElement('div');
+      rowDiv.className = 'row';
+      if (i < 20) {
+        var pEl = document.createElement('p');
+        pEl.innerHTML = (i+1) + '. <strong>' + usersArr[i].name + '</strong> - ' + usersArr[i].score;
+        if (userData.name === usersArr[i].name) {
+          pEl.style.color = 'red';
+        }
+        rowDiv.appendChild(pEl);
+      }  
+      containerDiv.appendChild(rowDiv);
+    }
+    var containerDiv2 = containerDiv.cloneNode(true);
+    containerDiv2.className = 'text-center';
+    if (window.location.hash === '#result' ) {
+      mainDiv.appendChild(containerDiv);
+      audio.src = 'audio/sounds/top20.mp3';
+      audio.play();
+      document.querySelector('.result-btn').className += ' hide';
+      window.addEventListener('hashchange',function() {
+        audio.pause();
+        document.querySelector('.result-btn').className = 'result-btn';
+      },false);
+    }
+    modalWind.appendChild(containerDiv2);
+  }
+  buildRatingList ();
+</script>
+  

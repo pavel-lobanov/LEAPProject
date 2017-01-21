@@ -1,0 +1,46 @@
+
+
+<script> 
+if (!themeNum) {
+    buildThemeList();
+} else {
+    loadVBGame();
+}
+function buildThemeList () {
+    var wrapDiv = document.getElementById('content-wrapper');
+    var containerDiv = document.createElement('div');
+    containerDiv.className = 'container';
+    var h1El = document.createElement('h1');
+    h1El.innerText = 'Выберите тему упражнения';
+    h1El.className = 'text-center';
+    containerDiv.appendChild(h1El);
+    var rowDiv = document.createElement('div');
+    rowDiv.className = 'row';
+    for (var i = 1; i < wordsThemes.length; i++) {
+        var colDiv = document.createElement('div');
+        colDiv.className = 'col-sm-4 col-md-4';
+        colDiv.innerHTML = '<p><a href="#vbgame_words' + i +
+        '"><button class="btn btn-default btn-block"><img src="img/words' + 
+        i + '.png" alt="" class="img-thumbnail"><span class="words-theme">' + 
+        wordsThemes[i]["theme"] +'</span></img></button></a></p>';
+        rowDiv.appendChild(colDiv);
+    }
+    containerDiv.appendChild(rowDiv);
+    wrapDiv.appendChild(containerDiv);
+ } 
+
+var gameModel,gameView,gameController;
+
+function loadVBGame () {
+    var gameView       = new TVBGameView();
+    var gameController = new TVBGameController();
+    var gameModel      = new TVBGameModel();
+
+    gameModel.init(gameView, gameController);
+    gameView.init(gameModel);
+    gameController.init(gameModel);
+    gameModel.chooseDifficulty();
+}
+</script> 
+
+

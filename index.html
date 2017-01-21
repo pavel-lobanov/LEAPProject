@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>LEAP Project</title>
+        <meta name="description" content="learn english and play">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="author" content="Павел Лобанов">
+        <meta name="description" content="Выпускной проект для Образовательного центра Парка высоких технологий (01.2017)">
+        <meta name="copyright" lang="ru" content="Лобанов Павел ( https://www.linkedin.com/in/pavel-lobanov-967074134 )">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.1/velocity.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <!-- LEAP MVC -->
+        <script src="js/VBStorage.js"></script>
+        <script src="js/VBGame.js"></script>
+        <script src="js/VBGameView.js"></script>
+        <script src="js/VBGameController.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container hide">
+            <nav class="navbar navbar-default navbar-inverse ">
+                <div class="navbar-header main-nav">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu" aria-expanded="false">
+                        <span class="sr-only">Меню</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">LEAPProject</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <p class="navbar-text nav-greeting hidden-xs"></p>
+                <p class="navbar-text text-center nav-scores"></p>
+                <div class="collapse navbar-collapse navbar-right" id="responsive-menu" aria-expanded="true">
+                    <ul class="nav navbar-nav">
+                        <li><a class="result-btn">ТОП 20</a></li>
+                        <li><a class="rules-btn">Описание</a></li>
+                        <li><a href="">Выход</a></li>                 
+                      </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <div id="content-wrapper"></div>
+        <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.2.4.min.js"><\/script>');</script>
+        <!-- SPA -->
+        <script src="js/VBSPA.js"></script>
+    </body>
+</html>

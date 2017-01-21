@@ -1,0 +1,1211 @@
+[[{
+    "en_word": "again",
+    "ru_translate": "cнова",
+    "transcription": "/əˈgɛn/",
+    "theme": "0"
+}, {
+    "en_word": "all",
+    "ru_translate": "все",
+    "transcription": "/ɔl/",
+    "theme": "0"
+}, {
+    "en_word": "and",
+    "ru_translate": "и",
+    "transcription": "/ænd/",
+    "theme": "0"
+}, {
+    "en_word": "bad",
+    "ru_translate": "плохой",
+    "transcription": "/bæd/",
+    "theme": "0"
+}, {
+    "en_word": "be",
+    "ru_translate": "быть",
+    "transcription": "/bi/",
+    "theme": "0"
+}, {
+    "en_word": "both",
+    "ru_translate": "оба",
+    "transcription": "/boʊθ/",
+    "theme": "0"
+}, {
+    "en_word": "can",
+    "ru_translate": "мочь",
+    "transcription": "/kæn/",
+    "theme": "0"
+}, {
+    "en_word": "do",
+    "ru_translate": "делать",
+    "transcription": "/dʊ/",
+    "theme": "0"
+}, {
+    "en_word": "from",
+    "ru_translate": "из",
+    "transcription": "/frʌm/",
+    "theme": "0"
+}, {
+    "en_word": "have",
+    "ru_translate": "иметь",
+    "transcription": "/hæv/",
+    "theme": "0"
+}, {
+    "en_word": "he",
+    "ru_translate": "он",
+    "transcription": "/hi/",
+    "theme": "0"
+}, {
+    "en_word": "I",
+    "ru_translate": "я",
+    "transcription": "/aɪ/",
+    "theme": "0"
+}, {
+    "en_word": "it",
+    "ru_translate": "это, оно",
+    "transcription": "/ɪt/",
+    "theme": "0"
+}, {
+    "en_word": "like",
+    "ru_translate": "как; нравиться",
+    "transcription": "/laɪk/",
+    "theme": "0"
+}, {
+    "en_word": "maybe",
+    "ru_translate": "может",
+    "transcription": "/ˈmeɪbi/ ",
+    "theme": "0"
+}, {
+    "en_word": "no",
+    "ru_translate": "нет",
+    "transcription": "/noʊ/",
+    "theme": "0"
+}, {
+    "en_word": "ok",
+    "ru_translate": "хорошо, ладно",
+    "transcription": "/ˈoʊˈkeɪ/",
+    "theme": "0"
+}, {
+    "en_word": "she",
+    "ru_translate": "она",
+    "transcription": "/ʃi/",
+    "theme": "0"
+}, {
+    "en_word": "take",
+    "ru_translate": "брать",
+    "transcription": "/teɪk/",
+    "theme": "0"
+}, {
+    "en_word": "thank",
+    "ru_translate": "благодарить",
+    "transcription": "/θæŋk/",
+    "theme": "0"
+}, {
+    "en_word": "thanks",
+    "ru_translate": "спасибо",
+    "transcription": "/θæŋks/",
+    "theme": "0"
+}, {
+    "en_word": "they",
+    "ru_translate": "они",
+    "transcription": "/ðeɪ/",
+    "theme": "0"
+}, {
+    "en_word": "this",
+    "ru_translate": "этот",
+    "transcription": "/ðɪs/",
+    "theme": "0"
+}, {
+    "en_word": "to",
+    "ru_translate": "в",
+    "transcription": "/tʊ, tə/",
+    "theme": "0"
+}, {
+    "en_word": "very",
+    "ru_translate": "очень",
+    "transcription": "/ˈvɛri/",
+    "theme": "0"
+}, {
+    "en_word": "we",
+    "ru_translate": "мы",
+    "transcription": "/wi/",
+    "theme": "0"
+}, {
+    "en_word": "what",
+    "ru_translate": "что",
+    "transcription": "/wʌt, wɒt",
+    "theme": "0"
+}, {
+    "en_word": "where",
+    "ru_translate": "где",
+    "transcription": "/ʰwɛər, wɛər/",
+    "theme": "0"
+}, {
+    "en_word": "who",
+    "ru_translate": "кто",
+    "transcription": "/ˈvɛri/",
+    "theme": "0"
+}, {
+    "en_word": "why",
+    "ru_translate": "почему",
+    "transcription": "/hu/",
+    "theme": "0"
+}, {
+    "en_word": "with",
+    "ru_translate": "с",
+    "transcription": "/wɪθ, wɪð/",
+    "theme": "0"
+}, {
+    "en_word": "yes",
+    "ru_translate": "да ",
+    "transcription": "/yɛs/",
+    "theme": "0"
+}, {
+    "en_word": "you",
+    "ru_translate": "ты",
+    "transcription": "/yʊ, yə/",
+    "theme": "0"
+}],
+[{
+    "en_word": "eight",
+    "ru_translate": "восемь",
+    "transcription": "/eɪt/",
+    "theme": "1"
+}, {
+    "en_word": "eighteen",
+    "ru_translate": "восемнадцать",
+    "transcription": "/ˈeɪˈtin/",
+    "theme": "1"
+}, {
+    "en_word": "eleven",
+    "ru_translate": "одинадцать",
+    "transcription": "/ɪˈlɛvən/",
+    "theme": "1"
+}, {
+    "en_word": "fifteen",
+    "ru_translate": "пятнадцать",
+    "transcription": "/ˈfɪfˈtin/",
+    "theme": "1"
+}, {
+    "en_word": "fifty",
+    "ru_translate": "пятьдесят",
+    "transcription": "/ˈfɪfti/",
+    "theme": "1"
+}, {
+    "en_word": "five",
+    "ru_translate": "пять",
+    "transcription": "/faɪv/",
+    "theme": "1"
+}, {
+    "en_word": "forty",
+    "ru_translate": "сорок",
+    "transcription": "/ˈfɔrti/",
+    "theme": "1"
+}, {
+    "en_word": "four",
+    "ru_translate": "четыре",
+    "transcription": "/fɔr/",
+    "theme": "1"
+}, {
+    "en_word": "fourteen",
+    "ru_translate": "четырнадцать",
+    "transcription": "/ˈfɔrˈtin/",
+    "theme": "1"
+}, {
+    "en_word": "nine",
+    "ru_translate": "девять",
+    "transcription": "/naɪn/",
+    "theme": "1"
+}, {
+    "en_word": "nineteen",
+    "ru_translate": "девятнадцать",
+    "transcription": "/ˈnaɪnˈtin/",
+    "theme": "1"
+}, {
+    "en_word": "one",
+    "ru_translate": "один",
+    "transcription": "/wʌn/",
+    "theme": "1"
+}, {
+    "en_word": "seven",
+    "ru_translate": "семь",
+    "transcription": "/ˈsɛvən/",
+    "theme": "1"
+}, {
+    "en_word": "seventeen",
+    "ru_translate": "семнадцать",
+    "transcription": "/ˈsɛvənˈtin/",
+    "theme": "1"
+}, {
+    "en_word": "six",
+    "ru_translate": "шесть",
+    "transcription": "/sɪks/",
+    "theme": "1"
+}, {
+    "en_word": "sixteen",
+    "ru_translate": "шестнадцать",
+    "transcription": "/ˈsɪksˈtin/ ",
+    "theme": "1"
+}, {
+    "en_word": "ten",
+    "ru_translate": "десять",
+    "transcription": "/tɛn/",
+    "theme": "1"
+}, {
+    "en_word": "thirteen",
+    "ru_translate": "тринадцать",
+    "transcription": "/ˈθɜrˈtin/",
+    "theme": "1"
+}, {
+    "en_word": "thirty",
+    "ru_translate": "тридцать",
+    "transcription": "/ˈθɜrti/",
+    "theme": "1"
+}, {
+    "en_word": "three",
+    "ru_translate": "три",
+    "transcription": "/θri/",
+    "theme": "1"
+}, {
+    "en_word": "twelve",
+    "ru_translate": "двенадцать",
+    "transcription": "/twɛlv/",
+    "theme": "1"
+}, {
+    "en_word": "twenty",
+    "ru_translate": "двадцать",
+    "transcription": "/ˈtwɛnti/",
+    "theme": "1"
+}, {
+    "en_word": "two",
+    "ru_translate": "два",
+    "transcription": "/tu/",
+    "theme": "1"
+}, {
+    "en_word": "zero",
+    "ru_translate": "ноль",
+    "transcription": "/ˈzɪr.oʊ/",
+    "theme": "1"
+}],
+[{
+    "en_word": "afternoon",
+    "ru_translate": "вторая половина дня",
+    "transcription": "/ˌæftərˈnun/",
+    "theme": "2"
+}, {
+    "en_word": "century",
+    "ru_translate": "век",
+    "transcription": "/ˈsɛntʃəri/ ",
+    "theme": "2"
+}, {
+    "en_word": "day",
+    "ru_translate": "день",
+    "transcription": "/deɪ/",
+    "theme": "2"
+}, {
+    "en_word": "evening",
+    "ru_translate": "вечер",
+    "transcription": "/ˈivnɪŋ/",
+    "theme": "2"
+}, {
+    "en_word": "future",
+    "ru_translate": "будущее",
+    "transcription": "/ˈfyutʃər/",
+    "theme": "2"
+}, {
+    "en_word": "hour",
+    "ru_translate": "час",
+    "transcription": "/ˈaʊər/",
+    "theme": "2"
+}, {
+    "en_word": "moment",
+    "ru_translate": "момент",
+    "transcription": "/ˈmoʊmənt/",
+    "theme": "2"
+}, {
+    "en_word": "month",
+    "ru_translate": "месяц",
+    "transcription": "/mʌnθ/",
+    "theme": "2"
+}, {
+    "en_word": "morning",
+    "ru_translate": "утро",
+    "transcription": "/ˈmɔrnɪŋ/",
+    "theme": "2"
+}, {
+    "en_word": "night",
+    "ru_translate": "ночь",
+    "transcription": "/naɪt/",
+    "theme": "2"
+}, {
+    "en_word": "noon",
+    "ru_translate": "полдень",
+    "transcription": "/nun/",
+    "theme": "2"
+}, {
+    "en_word": "past",
+    "ru_translate": "прошлый",
+    "transcription": "/pæst, pɑst/",
+    "theme": "2"
+}, {
+    "en_word": "spring",
+    "ru_translate": "весна",
+    "transcription": "/sprɪŋ/",
+    "theme": "2"
+}, {
+    "en_word": "summer",
+    "ru_translate": "лето",
+    "transcription": "/ˈsʌmər/",
+    "theme": "2"
+}, {
+    "en_word": "today",
+    "ru_translate": "сегодня",
+    "transcription": "/təˈdeɪ/",
+    "theme": "2"
+}, {
+    "en_word": "tomorrow",
+    "ru_translate": "завтра",
+    "transcription": "/təˈmɔroʊ, -ˈmɒroʊ/",
+    "theme": "2"
+}, {
+    "en_word": "tonight",
+    "ru_translate": "сегодня вечером",
+    "transcription": "/təˈnaɪt/",
+    "theme": "2"
+}, {
+    "en_word": "week",
+    "ru_translate": "неделя",
+    "transcription": "/wik/",
+    "theme": "2"
+}, {
+    "en_word": "weekend",
+    "ru_translate": "выходные",
+    "transcription": "/ˈwikˌɛnd, -ˈɛnd/",
+    "theme": "2"
+}, {
+    "en_word": "winter",
+    "ru_translate": "зима",
+    "transcription": "/ˈwɪntər/ ",
+    "theme": "2"
+}, {
+    "en_word": "year",
+    "ru_translate": "год",
+    "transcription": "/yɪər/",
+    "theme": "2"
+}, {
+    "en_word": "yesterday",
+    "ru_translate": "вчера",
+    "transcription": "/ˈyɛstərˌdeɪ, -di/",
+    "theme": "2"
+}],
+[{
+    "en_word": "a lot",
+    "ru_translate": "много",
+    "transcription": "/ə ˈlɒt/",
+    "theme": "3"
+}, {
+    "en_word": "bit",
+    "ru_translate": "кусок",
+    "transcription": "/bɪt/ ",
+    "theme": "3"
+}, {
+    "en_word": "bowl",
+    "ru_translate": "миска",
+    "transcription": "/boʊl/",
+    "theme": "3"
+}, {
+    "en_word": "bread",
+    "ru_translate": "хлеб",
+    "transcription": "/brɛd/",
+    "theme": "3"
+}, {
+    "en_word": "butter",
+    "ru_translate": "сливочное масло",
+    "transcription": "/ˈbʌtər/",
+    "theme": "3"
+}, {
+    "en_word": "cereal",
+    "ru_translate": "хлопья",
+    "transcription": "/ˈsɪriəl/",
+    "theme": "3"
+}, {
+    "en_word": "cheese",
+    "ru_translate": "сыр",
+    "transcription": "/tʃiz/ ",
+    "theme": "3"
+}, {
+    "en_word": "cream cheese",
+    "ru_translate": "сливочный сыр",
+    "transcription": "/krim tʃiz/",
+    "theme": "3"
+}, {
+    "en_word": "cucumber",
+    "ru_translate": "огурец",
+    "transcription": "/ˈkyukʌmbər/",
+    "theme": "3"
+}, {
+    "en_word": "fruit",
+    "ru_translate": "фрукт",
+    "transcription": "/frut/",
+    "theme": "3"
+}, {
+    "en_word": "grape",
+    "ru_translate": "виноград",
+    "transcription": "/greɪp/",
+    "theme": "3"
+}, {
+    "en_word": "ham",
+    "ru_translate": "ветчина",
+    "transcription": "/hæm/",
+    "theme": "3"
+}, {
+    "en_word": "juice",
+    "ru_translate": "сок",
+    "transcription": "/dʒus/",
+    "theme": "3"
+}, {
+    "en_word": "loaf",
+    "ru_translate": "буханка хлеба",
+    "transcription": "/loʊf/",
+    "theme": "3"
+}, {
+    "en_word": "melon",
+    "ru_translate": "дыня",
+    "transcription": "/ˈmɛlən/",
+    "theme": "3"
+}, {
+    "en_word": "milk",
+    "ru_translate": "молоко",
+    "transcription": "/mɪlk/",
+    "theme": "3"
+}, {
+    "en_word": "nut",
+    "ru_translate": "орех",
+    "transcription": "/nʌt/",
+    "theme": "3"
+}, {
+    "en_word": "oatmeal",
+    "ru_translate": "овсянка",
+    "transcription": "/ˈoʊtˌmil/",
+    "theme": "3"
+}, {
+    "en_word": "orange",
+    "ru_translate": "апельсин",
+    "transcription": "/ˈɔrɪndʒ, ˈɒr-/",
+    "theme": "3"
+}, {
+    "en_word": "pancake",
+    "ru_translate": "блин",
+    "transcription": "/ˈpænˌkeɪk/",
+    "theme": "3"
+}, {
+    "en_word": "strawberry",
+    "ru_translate": "клубника",
+    "transcription": "/ˈstrɔˌbɛri, -bəri/",
+    "theme": "3"
+}, {
+    "en_word": "sugar",
+    "ru_translate": "сахар",
+    "transcription": "/ˈʃʊgər/",
+    "theme": "3"
+}, {
+    "en_word": "sweet",
+    "ru_translate": "сладкий",
+    "transcription": "/swit/",
+    "theme": "3"
+}, {
+    "en_word": "toast",
+    "ru_translate": "гренка",
+    "transcription": "/toʊst/",
+    "theme": "3"
+}, {
+    "en_word": "tomato",
+    "ru_translate": "помидор",
+    "transcription": "/təˈmeɪtoʊ/",
+    "theme": "3"
+}, {
+    "en_word": "warm",
+    "ru_translate": "теплый",
+    "transcription": "/wɔrm/",
+    "theme": "3"
+}, {
+    "en_word": "watermelon",
+    "ru_translate": "арбуз",
+    "transcription": "/ˈwɒtərˌmɛlən/",
+    "theme": "3"
+}, {
+    "en_word": "yogurt",
+    "ru_translate": "йогурт",
+    "transcription": "/ˈyoʊgərt/ ",
+    "theme": "3"
+}], 
+[{
+    "en_word": "bar",
+    "ru_translate": "бар",
+    "transcription": "/bɑr/",
+    "theme": "4"
+}, {
+    "en_word": "beer",
+    "ru_translate": "пиво",
+    "transcription": "/bɪər/",
+    "theme": "4"
+}, {
+    "en_word": "beverage",
+    "ru_translate": "напиток",
+    "transcription": "/ˈbɛvərɪdʒ, ˈbɛvrɪdʒ/",
+    "theme": "4"
+}, {
+    "en_word": "cheeseburger",
+    "ru_translate": "чизбургер",
+    "transcription": "/ˈtʃizˌbɜrgər/",
+    "theme": "4"
+}, {
+    "en_word": "coke",
+    "ru_translate": "кока-кола",
+    "transcription": "/koʊk/",
+    "theme": "4"
+}, {
+    "en_word": "fried",
+    "ru_translate": "жареный",
+    "transcription": "/fraɪd/",
+    "theme": "4"
+}, {
+    "en_word": "grill",
+    "ru_translate": "гриль",
+    "transcription": "/grɪl/ ",
+    "theme": "4"
+}, {
+    "en_word": "hamburger",
+    "ru_translate": "гамбургер",
+    "transcription": "/ˈhæmˌbɜrgər/",
+    "theme": "4"
+}, {
+    "en_word": "hotdog",
+    "ru_translate": "хотдод",
+    "transcription": "/ˈhɑt.dɑg/",
+    "theme": "4"
+}, {
+    "en_word": "lunch",
+    "ru_translate": "обед",
+    "transcription": "/lʌntʃ/",
+    "theme": "4"
+}, {
+    "en_word": "mayonnaise",
+    "ru_translate": "майонез",
+    "transcription": "/ˌmeɪəˈneɪz/",
+    "theme": "4"
+}, {
+    "en_word": "milkshake",
+    "ru_translate": "молочный коктейль, милкшейк",
+    "transcription": "/ˈmɪlk.ʃeɪk/",
+    "theme": "4"
+}, {
+    "en_word": "napkin",
+    "ru_translate": "салфетка",
+    "transcription": "/ˈnæpkɪn/",
+    "theme": "4"
+}, {
+    "en_word": "pepper",
+    "ru_translate": "перец",
+    "transcription": "/ˈpɛpər/ ",
+    "theme": "4"
+}, {
+    "en_word": "pizza",
+    "ru_translate": "пицца",
+    "transcription": "/ˈpitsə/",
+    "theme": "4"
+}, {
+    "en_word": "roasted",
+    "ru_translate": "запеченный в духовке",
+    "transcription": "/'roʊstɪd/",
+    "theme": "4"
+}, {
+    "en_word": "roll",
+    "ru_translate": "булочка",
+    "transcription": "/roʊl/",
+    "theme": "4"
+}, {
+    "en_word": "salt",
+    "ru_translate": "соль",
+    "transcription": "/sɔlt/",
+    "theme": "4"
+}, {
+    "en_word": "sandwich",
+    "ru_translate": "бутерброд, сендвич",
+    "transcription": "/ˈsændwɪtʃ/",
+    "theme": "4"
+}, {
+    "en_word": "sauce",
+    "ru_translate": "соус",
+    "transcription": "/sɔs/",
+    "theme": "4"
+}, {
+    "en_word": "slice",
+    "ru_translate": "долька",
+    "transcription": "/slaɪs/ ",
+    "theme": "4"
+}, {
+    "en_word": "snack",
+    "ru_translate": "легкая закуска",
+    "transcription": "/snæk/",
+    "theme": "4"
+}, {
+    "en_word": "soda",
+    "ru_translate": "газированный напиток",
+    "transcription": "/ˈsoʊdə/",
+    "theme": "4"
+}, {
+    "en_word": "sour",
+    "ru_translate": "кислый",
+    "transcription": "/ˈsaʊər/",
+    "theme": "4"
+}],
+[{
+    "en_word": "adult",
+    "ru_translate": "взрослый",
+    "transcription": "/əˈdʌlt, ˈædʌlt/",
+    "theme": "5"
+}, {
+    "en_word": "baby",
+    "ru_translate": "ребенок",
+    "transcription": "/ˈbeɪbi/",
+    "theme": "5"
+}, {
+    "en_word": "boy",
+    "ru_translate": "мальчик",
+    "transcription": "/bɔɪ/",
+    "theme": "5"
+}, {
+    "en_word": "brother",
+    "ru_translate": "брат",
+    "transcription": "/ˈbrʌðər/",
+    "theme": "5"
+}, {
+    "en_word": "child",
+    "ru_translate": "ребенок",
+    "transcription": "/tʃaɪld/",
+    "theme": "5"
+}, {
+    "en_word": "couple",
+    "ru_translate": "пара",
+    "transcription": "/ˈkʌpəl/",
+    "theme": "5"
+}, {
+    "en_word": "daughter",
+    "ru_translate": "дочь",
+    "transcription": "/ˈdɔtər/ ",
+    "theme": "5"
+}, {
+    "en_word": "family",
+    "ru_translate": "семья",
+    "transcription": "/ˈfæməli/",
+    "theme": "5"
+}, {
+    "en_word": "father",
+    "ru_translate": "папа",
+    "transcription": "/ˈfɑðər/",
+    "theme": "5"
+}, {
+    "en_word": "girl",
+    "ru_translate": "девочка",
+    "transcription": "/gɜrl/",
+    "theme": "5"
+}, {
+    "en_word": "grandma",
+    "ru_translate": "бабушка",
+    "transcription": "/ˈgrænˌmɑ/",
+    "theme": "5"
+}, {
+    "en_word": "grandpa",
+    "ru_translate": "дедушка",
+    "transcription": "/ˈgrænˌpɑ/",
+    "theme": "5"
+}, {
+    "en_word": "husband",
+    "ru_translate": "муж",
+    "transcription": "/ˈhʌzbənd/",
+    "theme": "5"
+}, {
+    "en_word": "Mommy",
+    "ru_translate": "мама, мамочка",
+    "transcription": "/ˈmɒmi/ ",
+    "theme": "5"
+}, {
+    "en_word": "twin",
+    "ru_translate": "близнец",
+    "transcription": "/twɪn/ ",
+    "theme": "5"
+}],
+[{
+    "en_word": "arm",
+    "ru_translate": "рука",
+    "transcription": "/ɑrm/",
+    "theme": "6"
+}, {
+    "en_word": "black",
+    "ru_translate": "черный",
+    "transcription": "/blæk/",
+    "theme": "6"
+}, {
+    "en_word": "blue",
+    "ru_translate": "голубой, синий",
+    "transcription": "/blu/",
+    "theme": "6"
+}, {
+    "en_word": "body",
+    "ru_translate": "тело",
+    "transcription": "/ˈbɒdi/",
+    "theme": "6"
+}, {
+    "en_word": "color",
+    "ru_translate": "цвет",
+    "transcription": "/ˈkʌlər/",
+    "theme": "6"
+}, {
+    "en_word": "dark",
+    "ru_translate": "темный",
+    "transcription": "/dɑrk/ ",
+    "theme": "6"
+}, {
+    "en_word": "eye",
+    "ru_translate": "глаз",
+    "transcription": "/aɪ/",
+    "theme": "6"
+}, {
+    "en_word": "face",
+    "ru_translate": "лицо",
+    "transcription": "/feɪs/",
+    "theme": "6"
+}, {
+    "en_word": "foot",
+    "ru_translate": "стопа",
+    "transcription": "/fʊt/",
+    "theme": "6"
+}, {
+    "en_word": "green",
+    "ru_translate": "зеленый",
+    "transcription": "/grin/ ",
+    "theme": "6"
+}, {
+    "en_word": "hair",
+    "ru_translate": "волосы",
+    "transcription": "/hɛər/",
+    "theme": "6"
+}, {
+    "en_word": "hand",
+    "ru_translate": "рука; кисть руки",
+    "transcription": "/hænd/",
+    "theme": "6"
+}, {
+    "en_word": "head",
+    "ru_translate": "голова; возглавлять",
+    "transcription": "/hɛd/",
+    "theme": "6"
+}, {
+    "en_word": "heart",
+    "ru_translate": "сердце",
+    "transcription": "/hɑrt/",
+    "theme": "6"
+}, {
+    "en_word": "leg",
+    "ru_translate": "нога",
+    "transcription": "/lɛg/",
+    "theme": "6"
+}, {
+    "en_word": "mouth",
+    "ru_translate": "рот",
+    "transcription": "/maʊθ/",
+    "theme": "6"
+}, {
+    "en_word": "red",
+    "ru_translate": "красный",
+    "transcription": "/rɛd/",
+    "theme": "6"
+}, {
+    "en_word": "shoulder",
+    "ru_translate": "плечо",
+    "transcription": "/ˈʃoʊldər/",
+    "theme": "6"
+}, {
+    "en_word": "small",
+    "ru_translate": "маленький",
+    "transcription": "/smɔl/",
+    "theme": "6"
+}, {
+    "en_word": "white",
+    "ru_translate": "белый",
+    "transcription": "/ʰwaɪt, waɪt/",
+    "theme": "6"
+}, {
+    "en_word": "yellow",
+    "ru_translate": "желтый",
+    "transcription": "/ˈyɛloʊ/",
+    "theme": "6"
+}],
+[{
+    "en_word": "airplane",
+    "ru_translate": "самолет",
+    "transcription": "/ˈɛərˌpleɪn/",
+    "theme": "7"
+}, {
+    "en_word": "airport",
+    "ru_translate": "аэропорт",
+    "transcription": "/ˈɛərˌpɔrt/",
+    "theme": "7"
+}, {
+    "en_word": "baggage",
+    "ru_translate": "багаж",
+    "transcription": "/ˈbægɪdʒ/",
+    "theme": "7"
+}, {
+    "en_word": "board",
+    "ru_translate": "борт (самолета)",
+    "transcription": "/bɔrd/",
+    "theme": "7"
+}, {
+    "en_word": "boarding",
+    "ru_translate": "посадка",
+    "transcription": "/ˈbɔrdɪŋ/",
+    "theme": "7"
+}, {
+    "en_word": "box",
+    "ru_translate": "коробка",
+    "transcription": "/bɒks/",
+    "theme": "7"
+}, {
+    "en_word": "camera",
+    "ru_translate": "фотоаппарат",
+    "transcription": "/ˈkæmərə/",
+    "theme": "7"
+}, {
+    "en_word": "cell",
+    "ru_translate": "клетка, сотка",
+    "transcription": "/sɛl/",
+    "theme": "7"
+}, {
+    "en_word": "cell phone",
+    "ru_translate": "мобильный телефон",
+    "transcription": "/ˈsɛlˌfoʊn/",
+    "theme": "7"
+}, {
+    "en_word": "check in",
+    "ru_translate": "регистрация (на рейс)",
+    "transcription": "/ˈtʃɛkˌɪn/",
+    "theme": "7"
+}, {
+    "en_word": "customs",
+    "ru_translate": "таможня",
+    "transcription": "/ˈkʌstəms/",
+    "theme": "7"
+}, {
+    "en_word": "declaration",
+    "ru_translate": "декларация",
+    "transcription": "/ˌdɛkləˈreɪʃən/",
+    "theme": "7"
+}, {
+    "en_word": "declare",
+    "ru_translate": "декларировать",
+    "transcription": "/dɪˈklɛər/",
+    "theme": "7"
+}, {
+    "en_word": "forward",
+    "ru_translate": "вперед",
+    "transcription": "/ˈfɔrwərd/",
+    "theme": "7"
+}, {
+    "en_word": "gate",
+    "ru_translate": "выход (в аэропорту)",
+    "transcription": "/geɪt/",
+    "theme": "7"
+}, {
+    "en_word": "immigration",
+    "ru_translate": "иммиграция",
+    "transcription": "/ˌɪmɪˈgreɪʃən/",
+    "theme": "7"
+}, {
+    "en_word": "international",
+    "ru_translate": "международный",
+    "transcription": "/ˌɪntərˈnæʃənl/",
+    "theme": "7"
+}, {
+    "en_word": "lay",
+    "ru_translate": "класть",
+    "transcription": "/leɪ/",
+    "theme": "7"
+}, {
+    "en_word": "luggage",
+    "ru_translate": "багаж",
+    "transcription": "/ˈlʌgɪdʒ/",
+    "theme": "7"
+}, {
+    "en_word": "officer",
+    "ru_translate": "чиновник, служащий",
+    "transcription": " /ˈɔfəsər/",
+    "theme": "7"
+}, {
+    "en_word": "passport",
+    "ru_translate": "паспорт",
+    "transcription": "/ˈpæspɔrt/",
+    "theme": "7"
+}, {
+    "en_word": "purpose",
+    "ru_translate": "цель",
+    "transcription": "/ˈpɜrpəs/",
+    "theme": "7"
+}, {
+    "en_word": "remain",
+    "ru_translate": "оставаться",
+    "transcription": "/rɪˈmeɪn/",
+    "theme": "7"
+}, {
+    "en_word": "seat",
+    "ru_translate": "место",
+    "transcription": "/sit/",
+    "theme": "7"
+}, {
+    "en_word": "see",
+    "ru_translate": "видеть",
+    "transcription": "/si/",
+    "theme": "7"
+}, {
+    "en_word": "show",
+    "ru_translate": "показывать, шоу",
+    "transcription": "/ʃoʊ/",
+    "theme": "7"
+}, {
+    "en_word": "space",
+    "ru_translate": "пространство",
+    "transcription": "/speɪs/",
+    "theme": "7"
+}, {
+    "en_word": "step",
+    "ru_translate": "шаг, шагать",
+    "transcription": "/stɛp/",
+    "theme": "7"
+}, {
+    "en_word": "suitcase",
+    "ru_translate": "чемодан",
+    "transcription": "/ˈsutˌkeɪs/",
+    "theme": "7"
+}, {
+    "en_word": "thing",
+    "ru_translate": "вещь",
+    "transcription": "/θɪŋ/",
+    "theme": "7"
+}, {
+    "en_word": "ticket",
+    "ru_translate": "билет",
+    "transcription": "/ˈtɪkɪt/",
+    "theme": "7"
+}, {
+    "en_word": "travel",
+    "ru_translate": "путешествие ",
+    "transcription": " /ˈtrævəl/",
+    "theme": "7"
+}, {
+    "en_word": "trip",
+    "ru_translate": "поездка",
+    "transcription": "/trɪp/",
+    "theme": "7"
+}, {
+    "en_word": "visa",
+    "ru_translate": "виза",
+    "transcription": "/ˈvizə/",
+    "theme": "7"
+}, {
+    "en_word": "wait",
+    "ru_translate": "ждать",
+    "transcription": "/weɪt/",
+    "theme": "7"
+}],
+[{
+    "en_word": "arrive",
+    "ru_translate": "прибывать",
+    "transcription": "/əˈraɪv/",
+    "theme": "8"
+}, {
+    "en_word": "away",
+    "ru_translate": "далеко, прочь",
+    "transcription": "/əˈweɪ/",
+    "theme": "8"
+}, {
+    "en_word": "car",
+    "ru_translate": "машина",
+    "transcription": "/kɑr/",
+    "theme": "8"
+}, {
+    "en_word": "come",
+    "ru_translate": "приходить",
+    "transcription": "/kʌm/",
+    "theme": "8"
+}, {
+    "en_word": "continue",
+    "ru_translate": "продолжать",
+    "transcription": "/kənˈtɪnyu/",
+    "theme": "8"
+}, {
+    "en_word": "direction",
+    "ru_translate": "направление",
+    "transcription": "/dɪˈrɛkʃən/",
+    "theme": "8"
+}, {
+    "en_word": "drive",
+    "ru_translate": "ехать",
+    "transcription": "/draɪv/",
+    "theme": "8"
+}, {
+    "en_word": "drop",
+    "ru_translate": "падение",
+    "transcription": "/drɒp/",
+    "theme": "8"
+}, {
+    "en_word": "enter",
+    "ru_translate": "входить",
+    "transcription": "/ˈɛntər/",
+    "theme": "8"
+}, {
+    "en_word": "fall",
+    "ru_translate": "падать; осень",
+    "transcription": "/fɔl/",
+    "theme": "8"
+}, {
+    "en_word": "find",
+    "ru_translate": "находить",
+    "transcription": "/faɪnd/",
+    "theme": "8"
+}, {
+    "en_word": "fly",
+    "ru_translate": "летать",
+    "transcription": "/flaɪ/",
+    "theme": "8"
+}, {
+    "en_word": "get",
+    "ru_translate": "получать",
+    "transcription": "/gɛt/",
+    "theme": "8"
+}, {
+    "en_word": "go",
+    "ru_translate": "идти, ехать",
+    "transcription": "/goʊ/",
+    "theme": "8"
+}, {
+    "en_word": "jump",
+    "ru_translate": "прыгать",
+    "transcription": "/dʒʌmp/",
+    "theme": "8"
+}, {
+    "en_word": "leave",
+    "ru_translate": "оставить, покинуть",
+    "transcription": "/liv/",
+    "theme": "8"
+}, {
+    "en_word": "move",
+    "ru_translate": "двигаться",
+    "transcription": "/muv/",
+    "theme": "8"
+}, {
+    "en_word": "movement",
+    "ru_translate": "движение",
+    "transcription": "/ˈmuvmənt/",
+    "theme": "8"
+}, {
+    "en_word": "pass",
+    "ru_translate": "проходить",
+    "transcription": "/pæs/",
+    "theme": "8"
+}, {
+    "en_word": "race",
+    "ru_translate": "гонка",
+    "transcription": "/reɪs/",
+    "theme": "8"
+}, {
+    "en_word": "reach",
+    "ru_translate": "достигать",
+    "transcription": "/ritʃ/",
+    "theme": "8"
+}, {
+    "en_word": "return",
+    "ru_translate": "вернуть",
+    "transcription": "/rɪˈtɜrn/",
+    "theme": "8"
+}, {
+    "en_word": "ride",
+    "ru_translate": "ездить",
+    "transcription": "/raɪd/",
+    "theme": "8"
+}, {
+    "en_word": "road",
+    "ru_translate": "дорога",
+    "transcription": "/roʊd/",
+    "theme": "8"
+}, {
+    "en_word": "run",
+    "ru_translate": "бежать",
+    "transcription": "/rʌn/",
+    "theme": "8"
+}, {
+    "en_word": "sign",
+    "ru_translate": "подпись",
+    "transcription": "/saɪn/",
+    "theme": "8"
+}, {
+    "en_word": "sit",
+    "ru_translate": "сидеть",
+    "transcription": "/sɪt/",
+    "theme": "8"
+}, {
+    "en_word": "stand",
+    "ru_translate": "стоять",
+    "transcription": "/stænd/",
+    "theme": "8"
+}, {
+    "en_word": "stop",
+    "ru_translate": "останавливать",
+    "transcription": "/stɒp/",
+    "theme": "8"
+}, {
+    "en_word": "turn",
+    "ru_translate": "поворачивать",
+    "transcription": "/tɜrn/ ",
+    "theme": "8"
+}, {
+    "en_word": "walk",
+    "ru_translate": "гулять",
+    "transcription": "/wɔk/",
+    "theme": "8"
+}, {
+    "en_word": "way",
+    "ru_translate": "путь",
+    "transcription": "/weɪ/ ",
+    "theme": "8"
+}],
+[{
+    "en_word": "sit",
+    "ru_translate": "сидеть",
+    "transcription": "/sɪt/",
+    "theme": "test"
+}, {
+    "en_word": "stand",
+    "ru_translate": "стоять",
+    "transcription": "/stænd/",
+    "theme": "test"
+}, {
+    "en_word": "stop",
+    "ru_translate": "останавливать",
+    "transcription": "/stɒp/",
+    "theme": "test"
+}, {
+    "en_word": "turn",
+    "ru_translate": "поворачивать",
+    "transcription": "/tɜrn/ ",
+    "theme": "test"
+}, {
+    "en_word": "walk",
+    "ru_translate": "гулять",
+    "transcription": "/wɔk/",
+    "theme": "test"
+}, {
+    "en_word": "way",
+    "ru_translate": "путь",
+    "transcription": "/weɪ/ ",
+    "theme": "test"
+}]
+]
