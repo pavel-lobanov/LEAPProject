@@ -1,11 +1,20 @@
+/*
+---------------------
+ PRACTICE CONTROLLER
+---------------------
+*/
 function TVBGameController () {
 	var self = this;
 	var VBModel = null;
+
+	//Инициализация 
 	self.init = function (model) {
 		VBModel = model;
 		var progressBar = document.querySelector('.progress-bar');
 		AddEventHandler(progressBar,"animationend",VBModel.progressBarAnimationEnd,false);
 	}
+
+	//Устанавливаем проверку событий в зависимости от режима
 	self.setListeners = function () {
 		switch (VBModel.currMode) {
 			case 1:
@@ -38,6 +47,8 @@ function TVBGameController () {
 				break;
 		}
 	}
+
+	//Удаляем ненужные обработчики
 	self.removeListeners = function () {
 		switch (VBModel.currMode) {
 			case 1:
@@ -72,33 +83,45 @@ function TVBGameController () {
 				break;
 		}
 	}
+
+	//Добавляет обработчик на кнопку репетиции в конце игры
 	self.gameOver = function(){
 		var repModeButt = document.querySelector('.repetition-mode');
 		AddEventHandler(repModeButt,'click', VBModel.repetitionMode, false);
 	}
+
+	//Добавляем обработчики на кнопку "Далее" и на сочитание клавиш
 	self.setLevelDoneListeners = function () {
 		var changeLevel = document.querySelector('.change-level');
 		AddEventHandler(changeLevel,'click', VBModel.changeLevel, false);
 		$( '#content-wrapper' ).unbind('swipeleft');
 		document.body.addEventListener('keyup',VBModel.shiftNext, false);
 	}
+
+	//Очищаем обработчики в конце игры
 	self.removeLevelDoneListeners = function () {
 		var changeLevel = document.querySelector('.change-level');
 		RemoveEventHandler(changeLevel,'click', VBModel.changeLevel, false);
 		$( '#content-wrapper' ).unbind('swipeleft');
 		document.body.removeEventListener('keyup',VBModel.shiftNext, false);
 	}
+
+	//Обрабатывает состояние вкладки для предупреждения пользователя
 	self.setInitListeners = function () {
 		AddEventHandler(window,'beforeunload', VBModel.beforeQuit, false);
 		AddEventHandler(window,"hashchange",VBModel.beforeQuit,false);
 		window.removeEventListener('hashchange', switchToStateFromURLHash, false);
 	}
+
+	//Удаляет их
 	self.removeInitListeners = function () {
 		RemoveEventHandler(window,'beforeunload', VBModel.beforeQuit, false);
 		RemoveEventHandler(window,"hashchange",VBModel.beforeQuit,false);
 		var progressBar = document.querySelector('.progress-bar');
 		window.addEventListener('hashchange', switchToStateFromURLHash, false);
 	}
+
+	//Устанавливаем на кнопки выбора сложности
 	self.setDifficultyListeners = function () {
 		var chooseButtons = document.querySelectorAll('.btn-choose');
 		for (var i = 0; i < chooseButtons.length; i++) {
@@ -106,6 +129,8 @@ function TVBGameController () {
 			AddEventHandler(chooseButtons[i],'click', VBModel.startGame, false);
 		}
 	}
+
+	//Кроссбраузерное решение установки обработчика
 	var AddEventHandler = function(Elem,EventName,HandlerFunc,CaptureFlag)
 	{
 	  if ( Elem.addEventListener ) {

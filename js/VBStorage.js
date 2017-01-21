@@ -1,3 +1,8 @@
+/*
+----------------------
+ REMOVE USERS STORAGE
+----------------------
+*/
 function TVBStorage() {
 	var self = this;
   	var storage = {};

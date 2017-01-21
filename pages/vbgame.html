@@ -1,11 +1,15 @@
-
-
 <script> 
+/*
+---------------
+ PRACTICE PAGE
+---------------
+*/
 if (!themeNum) {
     buildThemeList();
 } else {
     loadVBGame();
 }
+//Выводит страницу с темами для практики
 function buildThemeList () {
     var wrapDiv = document.getElementById('content-wrapper');
     var containerDiv = document.createElement('div');
@@ -31,6 +35,7 @@ function buildThemeList () {
 
 var gameModel,gameView,gameController;
 
+//Запускает режим практики слов
 function loadVBGame () {
     var gameView       = new TVBGameView();
     var gameController = new TVBGameController();

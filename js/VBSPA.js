@@ -1,15 +1,20 @@
-var themeNum,wordsThemes,wordsBase,userID,userData;
-var pageLoader = false;
-var filesLoad = 0;
+/*
+-------------------------
+ SINGLE PAGE APPLICATION
+-------------------------
+*/
+var themeNum,wordsThemes,wordsBase,userID,userData; //номер темы, база тем, база слов, ид юзера, данные юзера
+var pageLoader = false; //загрузились ли все данные через AJAX
+var filesLoad = 0; //сколько файлов загружено
 var LEAPStorage = new TVBStorage();
 var audio = new Audio;
-LEAPStorage.init();
-window.addEventListener('hashchange', switchToStateFromURLHash, false);
-document.querySelector('.rules-btn').addEventListener('click', loadRules, false);
-document.querySelector('.result-btn').addEventListener('click', loadResult, false);
+LEAPStorage.init(); //посылаем запрос о пользователях на сервер
+window.addEventListener('hashchange', switchToStateFromURLHash, false); //следим за изменением хеша браузера
+document.querySelector('.rules-btn').addEventListener('click', loadRules, false); //
+document.querySelector('.result-btn').addEventListener('click', loadResult, false);//следим за кнопками в навбаре
 
 
-
+//Загружает и переключает страницы в соответвии с названием в хеше
 function switchToStateFromURLHash()
 {
   var URLHash=window.location.hash;
@@ -57,6 +62,7 @@ function switchToStateFromURLHash()
   }
 }
 
+//Загружает данные необходимые для работы
 function loadPageData () {
   $.getJSON('data/themes.json', function (data) {
   wordsThemes = data;
@@ -75,6 +81,7 @@ function loadPageData () {
   });
 }
 
+//Проверяет все ли файлы загружены
 function preloader(){
   if (!pageLoader) {
     $('body').append('<div id="page-preloader"><div class="cssload-loader"><div class="text-loading">Загрузка</div>'+
@@ -87,6 +94,38 @@ function preloader(){
     checkUser();
   }
 };
+
+//Проверка представился ли пользователь
+function checkUser() {
+  if (localStorage.userID) {
+    userID = +localStorage.userID;
+    userData = LEAPStorage.GetValue(userID);
+    updateNav();
+  } else {
+    setTimeout(function () {loadAuthWindow();},200)
+  }
+}
+
+//Если представился то записываем его в навбар
+function updateNav () {
+  var navGreet = document.querySelector('.nav-greeting');
+  var navScore = document.querySelector('.nav-scores');
+  navGreet.innerHTML = 'Имя:  <strong>' + userData.name + '</strong>';
+  navScore.innerHTML = 'Всего очков: <strong>' + userData.score + '</strong>';
+}
+
+//Если пользователь первый раз то спрашиваем: "как зовут?"
+function loadAuthWindow () {
+   var divEl = document.createElement('div');
+   divEl.className = 'rules';
+   $("#content-wrapper").append(divEl);
+   $('.rules').load("pages/authorization.html #auth-modal", function(){
+   $('#auth-modal').modal('show').unbind();
+   document.querySelector('.begin-butt').addEventListener('click', newUser, false);
+  }); 
+}
+
+//Добавляем пользователя к базе
 function newUser () {
   $('#auth-modal').modal('hide');
   var nameField = document.querySelector('.name-field');
@@ -104,16 +143,8 @@ function newUser () {
   LEAPStorage.AddValue(userID,userData);
 }
 
-function checkUser() {
-  if (localStorage.userID) {
-    userID = +localStorage.userID;
-    userData = LEAPStorage.GetValue(userID);
-    updateNav();
-  } else {
-    setTimeout(function () {loadAuthWindow();},200)
-  }
-}
 
+//Загружаем модальное окно ТОП20
  function loadResult () {
   var divEl = document.createElement('div');
   divEl.className = 'result';
@@ -121,7 +152,7 @@ function checkUser() {
   $('.result').load("pages/result.html", function(){$('#result-modal').modal('show');});
 }
 
-
+//Загружаем модальное окно с описанием
 function loadRules () {
   var divEl = document.createElement('div');
   divEl.className = 'rules';
@@ -129,23 +160,5 @@ function loadRules () {
   $('.rules').load("pages/rules.html #rules-modal", function(){$('#rules-modal').modal('show')});
 }
 
-
-
-function loadAuthWindow () {
-   var divEl = document.createElement('div');
-   divEl.className = 'rules';
-   $("#content-wrapper").append(divEl);
-   $('.rules').load("pages/authorization.html #auth-modal", function(){
-   $('#auth-modal').modal('show').unbind();
-   document.querySelector('.begin-butt').addEventListener('click', newUser, false);
-  }); 
-}
-
-function updateNav () {
-  var navGreet = document.querySelector('.nav-greeting');
-  var navScore = document.querySelector('.nav-scores');
-  navGreet.innerHTML = 'Имя:  <strong>' + userData.name + '</strong>';
-  navScore.innerHTML = 'Всего очков: <strong>' + userData.score + '</strong>';
-}
 preloader();
-loadPageData ();
+loadPageData();

@@ -1,3 +1,8 @@
+/*
+----------------
+ PRACTICE MODEL
+----------------
+*/
 function TVBGameModel() {
 	var self            = this;
 	var VBView          = null;  // ссылка на view
@@ -13,16 +18,19 @@ function TVBGameModel() {
 	self.currWordObj;			 // текущее слово в игре
 	self.currMode;				 // текущий режим
 
-	self.init = function (view, controller) {
+	//Функция инициализации
+	self.init = function (view, controller) { 
 		VBView       = view;
 		VBController = controller;
 	}
 
-	self.chooseDifficulty = function () {
+	//Спрашиваем пользователя какую сложность он хочет
+	self.chooseDifficulty = function () { 
 		VBView.chooseDifficultyWindow();
 		VBController.setDifficultyListeners();
 	}
 
+	//Проверяем ответ и запускаем необходимую сложность
 	self.startGame = function (evObj) {
 		var evObj = evObj || window.event;
 		difficulty = evObj.target.dataset.difficulty;
@@ -33,6 +41,7 @@ function TVBGameModel() {
 		self.changeLevel();
 	}
 
+	//Функция смены уровня (смотрит выбранную сложность, не закончилась ли игра и переключает на режим репетиции)
     self.changeLevel = function () {
     	if(self.currWordObj) VBController.removeLevelDoneListeners();
     	VBView.clearContent();
@@ -74,6 +83,43 @@ function TVBGameModel() {
 		}
     }
 
+    //Функция повторения неправильных ответов
+    self.repetitionMode = function () {
+		VBView.clearContent();
+		repMode = true;
+		if (!wrongWordsIDs.length) {
+			repMode = false;
+			return VBView.changeTheme();
+		}
+		self.currWordObj = wordsBase[themeNum][wrongWordsIDs.pop()];
+		switch (difficulty) {
+			case 'normal':
+				genRandomWords();
+				randNum = Math.floor(Math.random()*7);
+				self.currMode = 1;
+				VBView.VBGameMode1(randNum);
+				self.playSound();
+				VBController.setListeners();
+				break;
+			case 'advanced':
+				randNum = Math.floor(Math.random()*(1-0+1) )+0;
+		    	if (randNum === 0) {
+		    		self.currMode = 2;
+					VBView.VBGameMode2();
+					self.playSound();
+					VBController.setListeners();
+		    	}
+		    	if (randNum === 1) {
+		    		self.currMode = 3;
+					VBView.VBGameMode3(); 
+					VBController.setListeners();
+		    	}
+				break;
+		}
+
+	}
+
+    //Проверка ответа пользователя в зависимости от режима(mode) игры
     self.checkAnswer = function(evObj) {
 		var evObj  = evObj || window.event;
 		var currEl = evObj.target;
@@ -142,51 +188,19 @@ function TVBGameModel() {
         }
 	}
 
+	//Подсказка пользователю
 	self.giveMeHint = function () {
 		if (self.hitCounter === 1) {VBView.showHint(); hintUses++; changeScore(-2);addToRepetition();}
 		if (self.hitCounter === 2) {VBView.showHint(); hintUses++; changeScore(-3);addToRepetition();}
 		self.hitCounter++;
 	}
 
-    self.repetitionMode = function () {
-		VBView.clearContent();
-		repMode = true;
-		if (!wrongWordsIDs.length) {
-			repMode = false;
-			return VBView.changeTheme();
-		}
-		self.currWordObj = wordsBase[themeNum][wrongWordsIDs.pop()];
-		switch (difficulty) {
-			case 'normal':
-				genRandomWords();
-				randNum = Math.floor(Math.random()*7);
-				self.currMode = 1;
-				VBView.VBGameMode1(randNum);
-				self.playSound();
-				VBController.setListeners();
-				break;
-			case 'advanced':
-				randNum = Math.floor(Math.random()*(1-0+1) )+0;
-		    	if (randNum === 0) {
-		    		self.currMode = 2;
-					VBView.VBGameMode2();
-					self.playSound();
-					VBController.setListeners();
-		    	}
-		    	if (randNum === 1) {
-		    		self.currMode = 3;
-					VBView.VBGameMode3(); 
-					VBController.setListeners();
-		    	}
-				break;
-		}
-
-	}
-
+	//Воспроизвести текущее слово
     self.playSound = function () {
     	VBView.playCurrWord();
     }
 
+    //Выборщик рандомного слова из темы
 	var genRandomWords = function (count) {
 		var i = 0;
 		var j = 0;
@@ -202,13 +216,14 @@ function TVBGameModel() {
 	   	}
    	}
 
+   	//Выборщик ответов для первого режима
    	var genCurrWord = function () {
    		var i = 0;
    		while (!i) {
    			var randNum = Math.floor(Math.random()*( ( wordsBase[themeNum].length-1 )-0+1) )+0; //берем произвольное ИД слова 
    			if (wordsUsesIDs.indexOf(randNum) === -1) { //смотрим что бы не было использованно ранее
    				self.currWordObj = wordsBase[themeNum][randNum];
-	   			wordsUsesIDs.push(randNum); // добавляем слово в испольщованные
+	   			wordsUsesIDs.push(randNum); // добавляем слово в использованные
 	   			if (self.currMode === 1) { // для первого режима игры
 	   				if (self.randomWordsIDs.indexOf(randNum) > -1) break; // если слово есть в списке, ничего не делаем
 	   				var randNum2 = Math.floor(Math.random()*( ( self.randomWordsIDs.length-1 )-0+1) )+0; 
@@ -220,6 +235,7 @@ function TVBGameModel() {
    		
    	} 
 
+   	//Добавляет в массив текущее слово на которое пользователь неправильно ответил
    	var addToRepetition = function () {
 			if (!repMode) {
 				var wordToAdd = wordsUsesIDs[wordsUsesIDs.length-1]
@@ -230,12 +246,14 @@ function TVBGameModel() {
    			
    	}	
 
+   	//Очищает данные при смене уровня
    	var clearData = function () {
    		self.currWordObj = null;
    		self.randomWordsIDs = [];
    		self.hitCounter = 1;
    	};
 
+   	//Переключатель перехода к следующему слову
    	self.shiftNext = function (evObj) {
    		var evObj = evObj || window.event;
    		if (evObj.ctrlKey && evObj.keyCode === 39) {
@@ -243,18 +261,25 @@ function TVBGameModel() {
    		}
    	}
 
+   	//Инициализация воспроизведения звуков на мобильниках
    	self.mobileSoundInit = function () {
 		audio.play();
 		audio.pause();
     }
+
+    //Проверяет идет ли анимация на прегресс баре
     self.progressBarAnimationEnd = function (evObj) {
     	var evObj = evObj || window.event;
     	evObj.target.classList.toggle('active');
     }
+
+    //Передает во view сколько вывести очков и сколько очков заработал пользователь
     var changeScore = function (scoresToChange) {
     	gameScore += scoresToChange;
     	VBView.showCurrentScore(gameScore,scoresToChange,wordsUsesIDs);
     }
+
+    //Проверка, что бы пользователь случайно не закрыл окно или не нажал назад
     self.beforeQuit = function (evObj) {
     	var evObj = evObj || window.event;
     	switch (evObj.type){

@@ -1,7 +1,13 @@
+/*
+---------------
+ PRACTICE VIEW
+---------------
+*/
 function TVBGameView() {
     var self = this;
     var VBModel = null;
 
+    //Создаем необходимые элементы для отображения процесса
     self.init = function(model) {
         VBModel = model;
         var mainDiv = document.getElementById('content-wrapper');
@@ -20,6 +26,7 @@ function TVBGameView() {
         mainDiv.appendChild(gameContainer);
     }
 
+    //Выводит окно с выбором сложности
     this.chooseDifficultyWindow = function() {
         var mainDiv = document.querySelector('.VBWords');
         var rowDiv = document.createElement('div');
@@ -35,6 +42,8 @@ function TVBGameView() {
             duration: 700
         });
     }
+
+    //Первый режим (игрок выбирает из 6 ответов)
     this.VBGameMode1 = function(randNum) {
         var containerDiv = document.querySelector('.VBWords');
         var rowDiv = document.createElement('div');
@@ -75,6 +84,7 @@ function TVBGameView() {
         });
     }
 
+    //Второй режим (воспроизводит на англ., написать на англ)
     this.VBGameMode2 = function() {
         var containerDiv = document.querySelector('.VBWords');
         var rowDiv = document.createElement('div');
@@ -92,6 +102,7 @@ function TVBGameView() {
         document.querySelector('#answer-field').focus();
     }
 
+    //Третий режим (выводит на русск., написать на английском)
     this.VBGameMode3 = function() {
         var containerDiv = document.querySelector('.VBWords');
         var rowDiv = document.createElement('div');
@@ -108,6 +119,7 @@ function TVBGameView() {
         document.querySelector('#answer-field').focus();
     }
 
+    //Выводим таблицу с результатами и кнопки дальнейших действий
     self.gameOver = function(wordsWrong, hintUses, gameScore) {
         var weakWords = '';
         if (wordsWrong.length) {
@@ -140,6 +152,7 @@ function TVBGameView() {
         updateNav();
     }
 
+    //Выводит результат ответа игрока
     self.showResult = function(currEl, result) {
         switch (VBModel.currMode) {
             case 1:
@@ -178,6 +191,8 @@ function TVBGameView() {
         }
     }
 
+
+    //Показывает посказку игроку в зависимости от режима
     self.showHint = function() {
         var hintDiv = document.querySelector('.hint-place');
         switch (VBModel.currMode) {
@@ -206,6 +221,7 @@ function TVBGameView() {
         }
     }
 
+    //Воспроизводит текущее слово или заданный звук
     self.playCurrWord = function(fileName) {
         audio.currentTime = 0;
         if (fileName) {
@@ -219,6 +235,7 @@ function TVBGameView() {
         }, 200);
     }
 
+    //Вибрация
     self.vibro = function(longVibro) {
         if (navigator.vibrate) {
             if (!longVibro)
@@ -228,6 +245,8 @@ function TVBGameView() {
         }
     }
 
+
+    //Выводит кнопку перехода к следующему слову
     self.levelDone = function() {
         if (!document.querySelector('.shift-buttons')) {
             var gameContainer = document.querySelector('.VBWords');
@@ -245,11 +264,13 @@ function TVBGameView() {
         }
     }
 
+    //Очищает экран от контента
     self.clearContent = function() {
         var wordsDiv = document.querySelector('.VBWords');
         wordsDiv.innerHTML = '';
     }
 
+    //После репетиции выводит сообщение и кнопки к переходу
     self.changeTheme = function() {
         var mainDiv = document.getElementById('content-wrapper');
         var containerDiv = document.createElement('div');
@@ -262,6 +283,7 @@ function TVBGameView() {
         mainDiv.appendChild(containerDiv);
     }
 
+    //Выводит очки пользователя в текущий момент и показывает их изменение
     self.showCurrentScore = function(currScore, changedScore, wordsUsesIDs) {
         var scoreRow = document.querySelector('.current-score');
         var animatedScoreDiv = document.createElement('div');
@@ -281,5 +303,4 @@ function TVBGameView() {
         }
         scoreRow.appendChild(animatedScoreDiv);
     }
-
 }

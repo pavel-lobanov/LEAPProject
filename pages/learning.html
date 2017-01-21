@@ -1,10 +1,15 @@
 <script>
+/*
+---------------
+ LEARNING PAGE
+---------------
+*/
 if (!themeNum) {
     buildThemeList();
 } else {
     buildWordsTheme();
 }
-
+//Создаем окна с темами
 function buildThemeList() {
     var wrapDiv = document.getElementById('content-wrapper');
     var containerDiv = document.createElement('div');
@@ -25,7 +30,9 @@ function buildThemeList() {
     wrapDiv.appendChild(containerDiv);
 }
 
+//Функция обучения словам
 function buildWordsTheme () {
+    //Создаем необходимый контент
     var wrapDiv = document.getElementById('content-wrapper');
     var containerDiv = document.createElement('div');
     containerDiv.className = "container";
@@ -56,6 +63,7 @@ function buildWordsTheme () {
     var useInterval = false;
     var wordsShows;
 
+    //Титульное сообщение при входе
     function showTitle () {
       rowDiv.appendChild(titleIMG);
       rowDiv.className = 'text-center'
@@ -75,10 +83,11 @@ function buildWordsTheme () {
       rowDiv.appendChild(buttonEl);
     }
 
+    //Плавное потухание
     function fadeOut (el,func) {
       el.style.opacity = 1;
       var fadeTimer = setInterval(function () {
-          el.style.opacity -= 0.1;
+          el.style.opacity -= 0.05;
           if(el.style.opacity < 0.1) {
             el.style.opacity = 0;
             clearInterval(fadeTimer); 
@@ -86,17 +95,20 @@ function buildWordsTheme () {
          }
        },1000/60);
     }
+
+    //Плавное появление
     function fadeIn (el,func) {
       el.style.opacity = 0;
       var fadeTimer = setInterval(function () {
-          el.style.opacity = parseFloat(el.style.opacity)+0.1;
+          el.style.opacity = parseFloat(el.style.opacity)+0.05;
           if(el.style.opacity > 1) {
             clearInterval(fadeTimer); 
             if (func) func();
          }
-       },1000/30);
+       },1000/60);
     }
     
+    //Показывает слово из массива и проверяет количество слов на экране
     function showWord () {
         rowDiv.appendChild(divsArr[wordsCounter]);
         $(divsArr[wordsCounter]).velocity("scroll", { duration: 800});
@@ -122,6 +134,7 @@ function buildWordsTheme () {
         
     }
 
+    //Выводит кнопки в конце темы
     function showFinalButtons () {
       var rowDiv = document.createElement('div');
       rowDiv.className = 'row text-center';        
@@ -139,6 +152,7 @@ function buildWordsTheme () {
       containerDiv.appendChild(rowDiv);
     }
 
+    //Выводит кнокпи переключени между словами
     function nextWordsButtons () {
          var rowDiv = document.createElement('div');
          rowDiv.className = 'row text-center';        
@@ -167,6 +181,7 @@ function buildWordsTheme () {
          $(buttonEl).velocity("scroll", { duration: 800});
       }
 
+    //Проверяет куда листать список слов( вперед или назад )
     function changeWords (evObj) {
         var evObj = evObj || window.event;
         var button = evObj.target;
@@ -185,6 +200,8 @@ function buildWordsTheme () {
         }
 
     }
+
+    //Очистка экрана 
     function contentClear () {
         document.body.removeEventListener('keyup',changeWords, false);
         containerDiv.innerHTML = '';
@@ -197,12 +214,14 @@ function buildWordsTheme () {
             buttForClear[i].removeEventListener('click', changeWords, false);
         }
     }
-    
+
+    //Инициализация звука на мобильниках    
     function mobileSoundInit () {
       audio.play();
       audio.pause();
     }
 
+    //Воспроизводит слово
     function playSound(evObj,word) {
       var evObj = evObj || window.event;
       if (evObj) audio.currentTime = 0;
@@ -210,7 +229,7 @@ function buildWordsTheme () {
       audio.src='audio/'+ themeNum +'/'+ soundName +'.mp3';
       audio.play();
     }
-    window.addEventListener('hashchange',function() {useInterval = false; clearInterval(wordsShows);}, false);
+    window.addEventListener('hashchange',function() {useInterval = false; clearInterval(wordsShows);}, false); //удаляет вопроизведение слов при переходе на другую закладку
     showTitle();
 }
 </script>
