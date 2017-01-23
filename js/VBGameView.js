@@ -20,7 +20,7 @@ function TVBGameView() {
         progressBar.innerHTML = '<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>';
         var gameContainer = document.createElement('div');
         gameContainer.className = 'container VBWords';
-        scoreContainer.appendChild(scoreRow);
+        progressBar.appendChild(scoreRow);
         scoreContainer.appendChild(progressBar);
         mainDiv.appendChild(scoreContainer);
         mainDiv.appendChild(gameContainer);

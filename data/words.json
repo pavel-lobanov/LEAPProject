@@ -136,7 +136,7 @@
 }, {
     "en_word": "where",
     "ru_translate": "где",
-    "transcription": "/ʰwɛər, wɛər/",
+    "transcription": "/wɛər/",
     "theme": "0"
 }, {
     "en_word": "who",
@@ -343,7 +343,7 @@
 }, {
     "en_word": "past",
     "ru_translate": "прошлый",
-    "transcription": "/pæst, pɑst/",
+    "transcription": "/pæst/",
     "theme": "2"
 }, {
     "en_word": "spring",
@@ -363,7 +363,7 @@
 }, {
     "en_word": "tomorrow",
     "ru_translate": "завтра",
-    "transcription": "/təˈmɔroʊ, -ˈmɒroʊ/",
+    "transcription": "/təˈmɔroʊ/",
     "theme": "2"
 }, {
     "en_word": "tonight",
@@ -378,7 +378,7 @@
 }, {
     "en_word": "weekend",
     "ru_translate": "выходные",
-    "transcription": "/ˈwikˌɛnd, -ˈɛnd/",
+    "transcription": "/ˈwikˌɛnd/",
     "theme": "2"
 }, {
     "en_word": "winter",
@@ -393,7 +393,7 @@
 }, {
     "en_word": "yesterday",
     "ru_translate": "вчера",
-    "transcription": "/ˈyɛstərˌdeɪ, -di/",
+    "transcription": "/ˈyɛstərˌdeɪ/",
     "theme": "2"
 }],
 [{
@@ -489,7 +489,7 @@
 }, {
     "en_word": "orange",
     "ru_translate": "апельсин",
-    "transcription": "/ˈɔrɪndʒ, ˈɒr-/",
+    "transcription": "/ˈɔrɪndʒ/",
     "theme": "3"
 }, {
     "en_word": "pancake",
@@ -499,7 +499,7 @@
 }, {
     "en_word": "strawberry",
     "ru_translate": "клубника",
-    "transcription": "/ˈstrɔˌbɛri, -bəri/",
+    "transcription": "/ˈstrɔˌbɛri/",
     "theme": "3"
 }, {
     "en_word": "sugar",
@@ -550,7 +550,7 @@
 }, {
     "en_word": "beverage",
     "ru_translate": "напиток",
-    "transcription": "/ˈbɛvərɪdʒ, ˈbɛvrɪdʒ/",
+    "transcription": "/ˈbɛvərɪdʒ/",
     "theme": "4"
 }, {
     "en_word": "cheeseburger",
@@ -594,7 +594,7 @@
     "theme": "4"
 }, {
     "en_word": "milkshake",
-    "ru_translate": "молочный коктейль, милкшейк",
+    "ru_translate": "молочный коктейль",
     "transcription": "/ˈmɪlk.ʃeɪk/",
     "theme": "4"
 }, {
@@ -832,7 +832,7 @@
 }, {
     "en_word": "white",
     "ru_translate": "белый",
-    "transcription": "/ʰwaɪt, waɪt/",
+    "transcription": "/waɪt/",
     "theme": "6"
 }, {
     "en_word": "yellow",

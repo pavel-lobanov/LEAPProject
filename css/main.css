@@ -3,6 +3,12 @@ body {
 	background-color: rgb(233,233,233);
 	font-family: 'Roboto', sans-serif;
 }
+ /* ---------------
+      LOGO
+--------------- */
+.page-header {
+	border-bottom: 1px solid #aea1f2;
+}
 
 /*
 --------------------------
@@ -30,10 +36,11 @@ body {
 	opacity: 0.9;
 }
 .glyphicon-play-circle {
-	font-size: 5em;
+	font-size: 4.5em;
     position: absolute;
     top: 20%;
-    left: 38%;
+    left: 0;
+    right: 0;
     color: white;
     opacity: 0.2;
     transition: all 0.25s ease;
@@ -58,15 +65,7 @@ body {
 .form-group {
 	margin-top: 20px;
 }
-.progress-center {
-	height: 30px;
-    width: 40%;
-    margin: 0 auto;
-}
-.progress-bar {
-	background-color: #ffbc00;
-}
- .active {
+.active {
 	-webkit-animation-duration: .7s !important;
 	-o-animation-duration: .7s !important;
 	animation-duration: .7s !important;
@@ -108,7 +107,9 @@ a:hover {
 -------------------------------- 	
 */
 .current-score {
-	position: relative;
+	position: absolute;
+    left: 0;
+    right: 0;
 	font-size: 1.5em;
     font-weight: 600;
 }
@@ -116,7 +117,6 @@ a:hover {
 	display: inline-block;
 	position: absolute;
 	opacity: 0;
-    left: 59.5%;
 	font-size: 1.7em;
 }
 .current-score>.positive-score {
@@ -139,7 +139,20 @@ a:hover {
 	100%{opacity: 0;
 		 top: 55%;}
 }
-
+/* 
+--------------
+ PROGRESS BAR
+--------------
+ */
+ .progress-center {
+	height: 30px;
+    width: 50%;
+    margin: 0 auto;
+    min-width: 180px;
+}
+.progress-bar {
+	background-color: #ffbc00;
+}
 
 /* 
 --------------
@@ -155,7 +168,6 @@ a:hover {
     background: rgb(149, 184, 198);
     z-index: 100500;
 }
-
 #page-preloader .text-loading {
     position: absolute;
     font-size: large;
@@ -165,7 +177,6 @@ a:hover {
     font-size: 1.5em;
     text-shadow: 0 1px 10px rgba(220, 221, 235, 0.98);
 }
-
 .cssload-loader {
 	position: relative;
 	margin: -16px 0 0 -16px;
@@ -181,7 +192,6 @@ a:hover {
 		-moz-border-radius: 50%;
 	perspective: 780px;
 }
-
 .cssload-inner {
 	position: absolute;
 	width: 100%;
@@ -197,7 +207,6 @@ a:hover {
 		-webkit-border-radius: 50%;
 		-moz-border-radius: 50%;	
 }
-
 .cssload-inner.cssload-one {
 	left: 0%;
 	top: 0%;
@@ -208,7 +217,6 @@ a:hover {
 		-moz-animation: cssload-rotate-one 1.15s linear infinite;
 	border-bottom: 3px solid rgb(34,158,240);
 }
-
 .cssload-inner.cssload-two {
 	right: 0%;
 	top: 0%;
@@ -219,7 +227,6 @@ a:hover {
 		-moz-animation: cssload-rotate-two 1.15s linear infinite;
 	border-right: 3px solid rgb(34,158,240);
 }
-
 .cssload-inner.cssload-three {
 	right: 0%;
 	bottom: 0%;
@@ -230,7 +237,6 @@ a:hover {
 		-moz-animation: cssload-rotate-three 1.15s linear infinite;
 	border-top: 3px solid rgb(34,158,240);
 }
-
 @keyframes cssload-rotate-one {
 	0% {
 		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -239,7 +245,6 @@ a:hover {
 		transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
 	}
 }
-
 @-o-keyframes cssload-rotate-one {
 	0% {
 		-o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -248,7 +253,6 @@ a:hover {
 		-o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
 	}
 }
-
 @-ms-keyframes cssload-rotate-one {
 	0% {
 		-ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -257,7 +261,6 @@ a:hover {
 		-ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
 	}
 }
-
 @-webkit-keyframes cssload-rotate-one {
 	0% {
 		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -365,7 +368,12 @@ a:hover {
 		-moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
 	}
 }
-
-/* ---------------
-      LOGO
---------------- */
+@media (max-width: 768px) { 
+	.current-score {
+		font-size: 1em;
+	}
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+ }
